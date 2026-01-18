@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="Base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8" />
+    <title>About Smart Contact Manager</title>
+
+    <style>
+        .about-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .about-container{
+            background: rgba(255,255,255,0.95);
+            max-width: 900px;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+
+        .about-container h1{
+            text-align: center;
+            color: #003366;
+            margin-bottom: 25px;
+        }
+
+        .about-container h2{
+            color: #004080;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .about-container p{
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .about-container ul{
+            margin-left: 20px;
+        }
+
+        .about-container ul li{
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .highlight{
+            color: #0056b3;
+            font-weight: bold;
+        }
+
+        .footer-text{
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+<section class="banner about-section">
+    <div class="about-container">
+
+<      <center><h1>Smart Contact Manager</h1>
+
+        <p>
+            <span class="highlight">Smart Contact Manager (SCM)</span> is a modern
+            web-based application developed to help users efficiently manage
+            their contacts in a secure and organized manner. <br/>The application
+            eliminates the need for manual contact storage and provides
+            instant access to contact information anytime, anywhere.
+        </p>
+<br/>
+        <h2>Why Smart Contact Manager?</h2>
+        <p>
+            Managing contacts manually can be time-consuming and error-prone.<br/>
+            Smart Contact Manager offers a centralized platform where users
+            can easily store, search, and update contact details without
+            worrying about data loss.
+        </p>
+
+      
+
+      
+        <h2>Our Vision</h2>
+        <p>
+            Our vision is to create a simple yet powerful contact management
+            system .<br/>That helps individuals and organizations manage their
+            personal and professional networks effectively.
+        </p>
+<br/>
+<h2>Future Enhancements</h2>
+<p>
+    In the future, Smart Contact Manager aims to introduce several advanced
+    features to enhance user experience and functionality. <br/>Planned improvements
+    include cloud backup and synchronization to ensure data safety and
+    accessibility across multiple devices.<br/> Advanced contact analytics will help
+    users gain better insights into their stored contacts. The application also
+    plans to support mobile application integration.<br/>
+    Additionally, import and export functionality will be added to allow users
+    to easily transfer contact data between different platforms.
+</p>
+
+      
+</center>
+    </div>
+</section>
+</body>
+</html>
