@@ -1,20 +1,18 @@
-# Java 17 environment
+# Stage 1: Build
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
+
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Stage 2: Run
 FROM eclipse-temurin:17-jdk
 
-# Working directory
 WORKDIR /app
 
-# Project ke saare files copy karo
-COPY . .
+# sirf jar copy karo (lightweight image)
+COPY --from=builder /app/target/*.jar app.jar
 
-# mvnw ko executable banao
-RUN chmod +x mvnw
-
-# Project build karo
-RUN ./mvnw clean package -DskipTests
-
-# Port expose
 EXPOSE 8080
 
-# Spring Boot app run karo
-CMD ["java", "-jar", "target/*.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
